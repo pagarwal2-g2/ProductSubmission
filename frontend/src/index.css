@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #F9FAFB;
+  color: #111827;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#1D4ED8] text-white px-4 py-2 font-medium hover:bg-[#1E40AF] transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer;
+  }
+  .btn-secondary {
+    @apply bg-white text-[#1D4ED8] border border-[#1D4ED8] px-4 py-2 font-medium hover:bg-blue-50 transition-colors duration-150 cursor-pointer;
+  }
+  .btn-danger {
+    @apply bg-red-600 text-white px-4 py-2 font-medium hover:bg-red-700 transition-colors duration-150 cursor-pointer;
+  }
+  .btn-success {
+    @apply bg-green-600 text-white px-4 py-2 font-medium hover:bg-green-700 transition-colors duration-150 cursor-pointer;
+  }
+  .input-field {
+    @apply w-full border border-gray-300 px-3 py-2 focus:outline-none focus:border-[#1D4ED8] focus:ring-1 focus:ring-[#1D4ED8] text-sm bg-white;
+  }
+  .card {
+    @apply bg-white border border-gray-200 shadow-sm;
+  }
+  .badge-pending {
+    @apply inline-flex px-2 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800;
+  }
+  .badge-approved {
+    @apply inline-flex px-2 py-0.5 text-xs font-medium bg-green-100 text-green-800;
+  }
+  .badge-rejected {
+    @apply inline-flex px-2 py-0.5 text-xs font-medium bg-red-100 text-red-800;
+  }
+}
+
+table { border-collapse: collapse; width: 100%; }
+th {
+  text-align: left; font-size: 0.75rem; font-weight: 600;
+  color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em;
+  background-color: #F9FAFB; padding: 12px 16px; border-bottom: 1px solid #E5E7EB;
+}
+td { padding: 12px 16px; font-size: 0.875rem; color: #111827; border-bottom: 1px solid #F3F4F6; }
+tbody tr:hover td { background-color: #EFF6FF; }
